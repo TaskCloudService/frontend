@@ -3,7 +3,12 @@
   background-color: var(--cool-gray-10);
   display: flex;
   flex-direction: column;
-  top: 0;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .logo {
@@ -62,6 +67,7 @@
 
 .active .navLink {
   color: var(--primary-100);
+  border-radius: 0rem 0.75rem 0.75rem 0rem;
   border-left: 3px solid var(--primary-100);
 }
 
@@ -77,8 +83,16 @@
   font-size: var(--font-size-14);
 }
 
+
+.sidebarContentBottom {
+  margin-top: auto; 
+}
+
 .sidebarFooter {
   padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: auto;
 }
 

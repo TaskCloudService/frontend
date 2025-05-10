@@ -3,7 +3,7 @@
 import { SearchBar } from "../components/SearchBar"
 import styles from "../styles/Topbar.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons"
+import { faGear, faBell } from "@fortawesome/free-solid-svg-icons"
 
 export function Topbar() {
   return (
@@ -13,17 +13,17 @@ export function Topbar() {
         <p className={styles.welcomeMessage}>Hello Orlando, welcome back!</p>
       </div>
 
-      <SearchBar />
 
       <div className={styles.userActions}>
+      <SearchBar />
         <button className={styles.iconButton}>
           <span className={styles.icon}>
-            <span className="icon icon-bell"></span>
+            <span className="icon icon-bell"><FontAwesomeIcon icon={faGear} /></span>
           </span>
         </button>
         <button className={styles.iconButton}>
           <span className={styles.icon}>
-            <span className="icon icon-settings"><FontAwesomeIcon icon={faSignOutAlt} /></span>
+            <span className="icon icon-settings"><FontAwesomeIcon icon={faBell} /></span>
           </span>
         </button>
         <div className={styles.userProfile}>

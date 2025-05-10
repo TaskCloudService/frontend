@@ -79,9 +79,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f7f7f7;
+  background-color: var(--secondary-100);
   border: none;
-  color: #6d6e75;
+  color: var(--grey-10);
   cursor: pointer;
 }
 
@@ -109,7 +109,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #37437d;
+  background-color: var(--secondary-100);
   color: white;
   display: flex;
   align-items: center;
