@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 50;
+}
+
+.content {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 100%;
+  width: 24rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}

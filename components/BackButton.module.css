@@ -1,0 +1,14 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--primary-100);
+  border: none;
+  border-radius: 2.25rem;
+  font: inherit;
+  cursor: pointer;
+  transition: background .15s;
+  color: var(--grey-10);
+}
+
+.btn:hover { background:var(--button-hoover); }

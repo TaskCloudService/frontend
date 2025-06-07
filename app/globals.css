@@ -1,0 +1,351 @@
+/* GPT4o help mapping up the colors and spacing i did the rest */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color System - Light Mode */
+
+  /* Primary Colors */
+  --primary-110: #C256C7;
+  --primary-100: #f26cf9;
+  --primary-90: #f589fa;
+  --primary-50: #fcd3fe;
+  --primary-40: #fce2fe;
+  --primary-30: #fdedfe;
+
+  /* Secondary Colors */
+  --secondary-110: #1c2346;
+  --secondary-100: #37437d;
+  --secondary-90: #5562a2;
+  --secondary-70: #707dbf;
+  --secondary-60: #abb4dd;
+  --secondary-50: #d3daf9;
+
+  /* Yellow Colors */
+  --yellow-100: #ffca39;
+  --yellow-90: #ffefc3;
+
+  /* Grey Scale */
+  --grey-10: #ffffff;
+  --grey-20: #f7f7f7;
+  --grey-30: #ededed;
+  --grey-40: #e0e0e1;
+  --grey-50: #c3c3c4;
+  --grey-60: #9f9fa1;
+  --grey-70: #777779;
+  --grey-80: #636365;
+  --grey-90: #434345;
+  --grey-100: #1e1e20;
+
+  /* Cool Grey Scale */
+  --cool-grey-10: #eeefff;
+  --cool-grey-20: #e4e5f5;
+  --cool-grey-30: #dddeed;
+  --cool-grey-40: #d1d2e0;
+  --cool-grey-50: #b0b1bd;
+  --cool-grey-60: #8f8f99;
+  --cool-grey-70: #72737a;
+  --cool-grey-80: #56565c;
+  --cool-grey-90: #39393d;
+  --cool-grey-100: #131314;
+
+  --button-hoover: #f589fa;
+
+  /* Semantic Colors - Light Mode */
+  --background: var(--grey-10);
+  --foreground: var(--grey-100);
+  --muted: var(--grey-30);
+  --muted-foreground: var(--grey-70);
+  --card: var(--grey-10);
+  --card-foreground: var(--grey-100);
+  --border: var(--grey-40);
+  --input: var(--grey-40);
+  --accent: var(--cool-grey-20);
+  --accent-foreground: var(--cool-grey-90);
+  --primary: var(--primary-100);
+  --primary-foreground: var(--grey-10);
+  --secondary: var(--secondary-90);
+  --secondary-foreground: var(--grey-10);
+  --destructive: #ff4d4f;
+  --destructive-foreground: var(--grey-10);
+  --success: #52c41a;
+  --success-foreground: var(--grey-10);
+  --warning: var(--yellow-100);
+  --warning-foreground: var(--grey-100);
+  --ring: var(--primary-50);
+
+  /* Typography */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Font Sizes */
+  --font-size-32: 2rem;
+  --font-size-28: 1.75rem;
+  --font-size-26: 1.625rem;
+  --font-size-24: 1.5rem;
+  --font-size-22: 1.375rem;
+  --font-size-20: 1.25rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+  --font-size-14: 0.875rem;
+  --font-size-12: 0.75rem;
+  --font-size-11: 0.6875rem;
+  --font-size-10: 0.625rem;
+  --font-size-9: 0.5625rem;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+
+  /* Borders */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-xxl: 1rem;
+  --radius-full: 1.875rem;
+}
+
+/* Dark Mode - Using prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-theme) {
+    /* Semantic Colors - Dark Mode */
+    --background: var(--grey-100);
+    --foreground: var(--grey-10);
+    --muted: var(--grey-90);
+    --muted-foreground: var(--grey-40);
+    --card: var(--grey-90);
+    --card-foreground: var(--grey-10);
+    --border: var(--grey-80);
+    --input: var(--grey-80);
+    --accent: var(--cool-grey-80);
+    --accent-foreground: var(--cool-grey-10);
+    --primary: var(--primary-90);
+    --primary-foreground: var(--grey-100);
+    --secondary: var(--secondary-70);
+    --secondary-foreground: var(--grey-100);
+    --ring: var(--primary-90);
+  }
+}
+
+/* Class-based Dark Mode - For manual toggling */
+.dark-theme {
+  --background: var(--grey-100);
+  --foreground: var(--grey-10);
+  --muted: var(--grey-90);
+  --muted-foreground: var(--grey-40);
+  --card: var(--grey-90);
+  --card-foreground: var(--grey-10);
+  --border: var(--grey-80);
+  --input: var(--grey-80);
+  --accent: var(--cool-grey-80);
+  --accent-foreground: var(--cool-grey-10);
+  --primary: var(--primary-90);
+  --primary-foreground: var(--grey-100);
+  --secondary: var(--secondary-70);
+  --secondary-foreground: var(--grey-100);
+  --ring: var(--primary-90);
+}
+
+/* Force Light Mode */
+.light-theme {
+  --background: var(--grey-10);
+  --foreground: var(--grey-100);
+  --muted: var(--grey-30);
+  --muted-foreground: var(--grey-70);
+  --card: var(--grey-10);
+  --card-foreground: var(--grey-100);
+  --border: var(--grey-40);
+  --input: var(--grey-40);
+  --accent: var(--cool-grey-20);
+  --accent-foreground: var(--cool-grey-90);
+  --primary: var(--primary-100);
+  --primary-foreground: var(--grey-10);
+  --secondary: var(--secondary-90);
+  --secondary-foreground: var(--grey-10);
+  --ring: var(--primary-50);
+}
+
+/* Base Styles */
+html,
+body {
+  font-family: var(--font-sans);
+  background-color: var(--grey-10);
+  color: var(--secondary-110);
+  font-size: 16px;
+  line-height: var(--line-height-normal);
+  max-width: 100%;       /* never wider than the viewport */
+  overflow-x: hidden;
+}
+
+/* Typography Utility Classes */
+
+/* Headings */
+h1,
+.h1 {
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h1.bold,
+.h1-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h2.bold,
+.h2-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-26);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h3.bold,
+.h3-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h4.bold,
+.h4-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+h5,
+.h5 {
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h5.bold,
+.h5-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+h6,
+.h6 {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h6.bold,
+.h6-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar content"
+    "sidebar footer";
+  height: 100vh;
+  width: 100vw;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+}
+
+.sidebar-area {
+  grid-area: sidebar;
+  background-color: var(--cool-grey-10);
+  border-radius: var(--radius-xxl);
+  padding: 1.5rem 0;
+  height: 100%;
+}
+
+.topbar-area {
+  grid-area: topbar;
+  background-color: var(--grey-20);
+  border-bottom: 1px solid #e4e5f5;
+  border-radius: var(--radius-xxl);
+}
+
+.content {
+  grid-area: content;
+  padding: 20px;
+  height: 100%;
+  border-radius: var(--radius-xxl);
+  background-color: var(--grey-20);
+}
+
+.footer-area {
+  grid-area: footer;
+  background-color: #ffffff;
+  border-top: 1px solid #e4e5f5;
+  border-radius: var(--radius-xxl);
+  background-color: var(--grey-20);
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+  .grid-layout {
+    grid-template-columns: 60px minmax(0, 1fr);             
+    gap: var(--spacing-2);
+    padding: var(--spacing-2);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar-area {
+    display: none; 
+  }
+  .grid-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "topbar"
+      "content"
+      "footer";
+    gap: var(--spacing-1);
+    padding: var(--spacing-1);
+  }
+
+  .container-dashboard {
+  width: 100%;
+  }
+
+}

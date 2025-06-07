@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menuMainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+
+.menuLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+
+.menuRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+.mainContent {
+  flex-grow: 1;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.menuLeft button {
+  padding: 0.6rem 1rem;
+  background-color: var(--grey-10);
+  border: none;
+  border-radius: 2.25rem;
+  font-size: 0.95rem;
+  color: var(--grey-90);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menuLeft button:hover {
+  background-color: #e5e5e5;
+  border-color: #aaa;
+}
+
+
+.menuLeft button.activeButton {
+  background-color: var(--primary-100);
+  color: var(--grey-10);
+  border-color: var(--primary-100);
+}
+
+@media (max-width: 768px) {
+  .menuMainContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menuRight {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

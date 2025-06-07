@@ -1,0 +1,19 @@
+.openButton {
+  background-color: var(--primary-100);
+  color: white;
+  border: none;
+  border-radius: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.openButton:hover {
+  background-color: var(--button-hoover);
+}
+
+.header {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}

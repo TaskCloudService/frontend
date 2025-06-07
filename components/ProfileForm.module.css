@@ -1,0 +1,118 @@
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.fieldset legend {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #333;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.row > .input {
+  flex: 1;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.buttonSubmit {
+  background-color: var(--primary-100);
+  color: white;
+  border: none;
+  border-radius: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.buttonSubmit:hover {
+  background-color: var(--button-hoover);
+}
+
+.buttonCancel {
+  background-color: var(--cool-grey-20);
+  color: var(--secondary-100);
+  border: none;
+  border-radius: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.buttonCancel:hover {
+  background-color: var(--cool-grey-10);
+}
+
+.danger {
+  background: #d32f2f;
+}
+
+.danger:hover {
+  background: #b71c1c;
+}
+
+.error {
+  color: #d32f2f;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form button {
+    width: 100%;
+  }
+}

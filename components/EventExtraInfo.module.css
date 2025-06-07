@@ -1,0 +1,16 @@
+.wrapper { 
+    display:grid;
+     gap:1.25rem; 
+     grid-template-columns:1fr; 
+     margin-block:2rem 
+    }
+@media (min-width:600px) { 
+    .wrapper {
+        grid-template-columns:1fr 1fr
+    } 
+}
+@media (min-width:960px) { 
+    .wrapper {
+    grid-template-columns:repeat(4,1fr)
+    } 
+}

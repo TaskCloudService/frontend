@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.link {
+  color: var(--grey-50);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--button-hoover); 
+}

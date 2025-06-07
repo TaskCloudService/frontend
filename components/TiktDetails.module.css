@@ -1,0 +1,179 @@
+.ticket {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  font-family: sans-serif;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.left {
+  width: 35%;
+  background: #eef0ff;
+  padding: 1rem;
+  position: relative;
+
+  -webkit-mask-image:
+    radial-gradient(circle 20px at top right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom right, transparent 20px, black 21px),
+    linear-gradient(black, black);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  mask-image:
+    radial-gradient(circle 20px at top right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom right, transparent 20px, black 21px),
+    linear-gradient(black, black);
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0; 
+  height: 100%;
+  border-right: 3px dashed #fff; 
+}
+
+.left img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.SubText {
+  background: linear-gradient(180deg, rgba(28, 35, 70, 0.00) 0%, #1C2346 100%);
+  padding: 1rem;
+  color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.SubText h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.middle {
+  width: 35%;
+  padding: 1rem;
+  background: #eef0ff;
+  position: relative;
+}
+
+.middle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  border-right: 3px dashed #fff;
+}
+
+.mask-inward {
+  -webkit-mask-image:
+    radial-gradient(circle 20px at top right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at top left, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom left, transparent 20px, black 21px),
+    linear-gradient(black, black);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  mask-image:
+    radial-gradient(circle 20px at top right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom right, transparent 20px, black 21px),
+    radial-gradient(circle 20px at top left, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom left, transparent 20px, black 21px),
+    linear-gradient(black, black);
+  }
+
+  .ticketUpperMiddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .ticketUpperMiddleTop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ticketUpperMiddleBottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ticketDownerMiddle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .dateTime {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .middle span {
+    font-weight: 600;
+  }
+  
+  .middle p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.divider {
+  border-bottom: 1px solid #fff;
+  margin: 2rem 0;
+}
+
+
+.right {
+  width: 30%;
+  background: #eef0ff;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+
+  -webkit-mask-image:
+    radial-gradient(circle 20px at top left, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom left, transparent 20px, black 21px),
+    linear-gradient(black, black);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  mask-image:
+    radial-gradient(circle 20px at top left, transparent 20px, black 21px),
+    radial-gradient(circle 20px at bottom left, transparent 20px, black 21px),
+    linear-gradient(black, black);
+}
+
+.right p {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.rightTextUpper {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .ticket {
+    flex-direction: column;
+  }
+
+  .left, .middle, .right {
+    width: 100%;
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+}

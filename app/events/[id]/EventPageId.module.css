@@ -1,0 +1,17 @@
+.topContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.topContent h1 {
+    color: var(--primary-110);
+    padding-bottom: 2rem;
+    font-size: var(--font-size-26);
+}
+
+.topContent h2 {
+    padding-bottom: 2rem;
+    font-size: var(--font-size-32);
+}

@@ -1,0 +1,20 @@
+.slider { position: relative; display: inline-block; }
+.viewport { overflow: hidden; }
+.nav {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  border: none;
+  font-size: 3rem;
+  background: transparent;
+  cursor: pointer;
+}
+.nav:first-of-type { left: -42px; }
+.nav:last-of-type  { right: -42px; }
+
+.dots { margin-top: .5rem; text-align: center; }
+.dot {
+  width: 8px; height: 8px; margin: 0 3px;
+  border-radius: 50%; border: none; background: #bbb; cursor: pointer;
+}
+.dot.active { background: #333; }
